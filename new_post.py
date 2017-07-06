@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Creates a new file in the current folder and inputs the Page Header info for Jekyll Blog post
+# Creates a new file in the current folder and inputs the "Front Matter" info for Jekyll post
 # File format:
 # ---
 # layout: post

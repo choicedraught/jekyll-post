@@ -13,7 +13,7 @@ import argparse
 import os.path
 from datetime import datetime
 import time
-def date2iso(thedate): # Some dudes neat little hack to get the TZ Offset
+def date2iso(thedate): # Some dudes neat little hack to get the TZ Offset - apparently this is easier in Python3
      strdate = thedate.strftime("%Y-%m-%d %H:%M:%S")
      minute = (time.localtime().tm_gmtoff / 60) % 60
      hour = ((time.localtime().tm_gmtoff / 60) - minute) / 60

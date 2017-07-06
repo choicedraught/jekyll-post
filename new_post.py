@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 
 # Creates a new file in the current folder and inputs the Page Header info for Jekyll Blog post
 # File format:

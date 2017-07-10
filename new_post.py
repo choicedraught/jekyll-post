@@ -13,7 +13,6 @@ import argparse
 import os.path
 from datetime import datetime, timedelta, timezone
 import time
-<<<<<<< HEAD
 
 date = datetime.now(timezone.utc).astimezone()
 =======
@@ -25,7 +24,6 @@ def date2iso(thedate): # Some dudes neat little hack to get the TZ Offset - appa
      if utcoffset[0] != '-':
          utcoffset = ' +' + utcoffset
      return strdate + utcoffset
->>>>>>> 66329b767474a09f4e385617cee5217e2d5a72c2
 
 ArgumentParser = argparse.ArgumentParser(description='Give me the title of your Blog post mofo.')
 ArgumentParser.add_argument('title', nargs='+', help='Required: The Title of your Blog Post') # This is how you do a positional argument apparently

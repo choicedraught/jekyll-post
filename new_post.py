@@ -12,7 +12,6 @@
 import argparse
 import os.path
 from datetime import datetime, timedelta, timezone
-import time
 
 ArgumentParser = argparse.ArgumentParser(description='Give me the title of your Blog post mofo.')
 ArgumentParser.add_argument('title', nargs='+', help='Required: The Title of your Post') # This is how you do a positional argument apparently

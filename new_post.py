@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Creates a new file in the current folder and inputs the Page Header info for Jekyll Blog post
+# Creates a new file in the current folder and inputs the "Front Matter" info for Jekyll post
 # File format:
 # ---
 # layout: post
@@ -13,8 +13,19 @@ import argparse
 import os.path
 from datetime import datetime, timedelta, timezone
 import time
+<<<<<<< HEAD
 
 date = datetime.now(timezone.utc).astimezone()
+=======
+def date2iso(thedate): # Some dudes neat little hack to get the TZ Offset - apparently this is easier in Python3
+     strdate = thedate.strftime("%Y-%m-%d %H:%M:%S")
+     minute = (time.localtime().tm_gmtoff / 60) % 60
+     hour = ((time.localtime().tm_gmtoff / 60) - minute) / 60
+     utcoffset = "%.2d%.2d" %(hour, minute)
+     if utcoffset[0] != '-':
+         utcoffset = ' +' + utcoffset
+     return strdate + utcoffset
+>>>>>>> 66329b767474a09f4e385617cee5217e2d5a72c2
 
 ArgumentParser = argparse.ArgumentParser(description='Give me the title of your Blog post mofo.')
 ArgumentParser.add_argument('title', nargs='+', help='Required: The Title of your Blog Post') # This is how you do a positional argument apparently

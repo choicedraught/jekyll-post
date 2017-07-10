@@ -30,7 +30,7 @@ else:
   isodate    = args.datetime
   shortdate  = isodate.split(" ",2)[0] # We just want the date part for out filename
 
-filetitle    = "-".join(title) # Split the title into words and then hyphen them
+filetitle    = "-".join(title) # Split the title into words and then hyphen them (plus we need to remove special chars)
 posttitle    = " ".join(title)
 filename     = shortdate+"-"+filetitle+".markdown" # Now create the filename 
 output       = "---\nlayout: post\ntitle:  "+posttitle+"\ndate:   "+isodate+"\ncategories: "+categories+"\n---\n" # Create the Post conetent as a string

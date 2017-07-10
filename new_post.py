@@ -15,15 +15,6 @@ from datetime import datetime, timedelta, timezone
 import time
 
 date = datetime.now(timezone.utc).astimezone()
-=======
-def date2iso(thedate): # Some dudes neat little hack to get the TZ Offset - apparently this is easier in Python3
-     strdate = thedate.strftime("%Y-%m-%d %H:%M:%S")
-     minute = (time.localtime().tm_gmtoff / 60) % 60
-     hour = ((time.localtime().tm_gmtoff / 60) - minute) / 60
-     utcoffset = "%.2d%.2d" %(hour, minute)
-     if utcoffset[0] != '-':
-         utcoffset = ' +' + utcoffset
-     return strdate + utcoffset
 
 ArgumentParser = argparse.ArgumentParser(description='Give me the title of your Blog post mofo.')
 ArgumentParser.add_argument('title', nargs='+', help='Required: The Title of your Blog Post') # This is how you do a positional argument apparently
@@ -48,12 +39,12 @@ if os.path.isfile(filename):
   print("\n")  
   print("Error: File '"+filename+"'"+" exists, exiting.")
   print("\n") 
-  print(output) 
+  #print(output) 
   quit()
 else:
-  print(output)
-  #f = open(filename, 'w')
-  #f.write(output)
+  #print(output)
+  f = open(filename, 'w')
+  f.write(output)
 
 print("\n")  
 print("Created new blog post in: '"+filename+"'. You're welcome!\n")

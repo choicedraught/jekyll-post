@@ -46,5 +46,5 @@ else:
   f.write(output)
 
 print("\n")  
-print("Created new blog post in: '"+filename+"'. You're welcome!\n")
+print("Created new blog post in: '"+filename+"'.\n")
 quit()
